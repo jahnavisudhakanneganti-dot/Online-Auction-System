@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Auction - Online Auction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Auction System</h1>
+        <p>Admin Panel</p>
+    </header>
+
+    <nav>
+        <a href="admin-dashboard.html">Admin Dashboard</a>
+        <a href="manage-auctions.html">Manage Auctions</a>
+        <a href="#" onclick="adminLogout()">Logout</a>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Add New Auction</h1>
+
+        <p>Create a new auction item for users.</p>
+
+        <form id="auctionForm">
+
+            <p>
+                <label>Product Name</label><br>
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Enter product name"
+                    required>
+            </p>
+
+            <p>
+                <label>Starting Bid</label><br>
+                <input
+                    type="number"
+                    id="startingBid"
+                    placeholder="Enter starting bid"
+                    required>
+            </p>
+
+            <p>
+                <label>Auction Description</label><br>
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Enter product description"
+                    required>
+            </p>
+
+            <button type="submit">
+                Add Auction
+            </button>
+
+        </form>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

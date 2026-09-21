@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Auctions - Online Auction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<body>
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <header>
+    <header>
+        <h1>Online Auction System</h1>
+        <p>Bid. Win. Own.</p>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="auctions.html">Live Auctions</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Live Auctions</h1>
+
+        <p>Choose a product and place your bid.</p>
+
+        <!-- Admin-added auctions will appear here -->
+        <div class="products" id="auctionList"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

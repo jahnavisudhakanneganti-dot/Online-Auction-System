@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard - Online Auction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+    <header>
+        <h1>Online Auction System</h1>
+        <p>Bid. Win. Own.</p>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="auctions.html">Live Auctions</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Welcome to Your Dashboard</h1>
+
+        <p>
+            Explore live auctions and participate by placing bids.
+        </p>
+
+        <div class="products">
+
+            <div class="product">
+                <h2>Live Auctions</h2>
+
+                <p>
+                    View available products and place your bids.
+                </p>
+
+                <button onclick="location.href='auctions.html'">
+                    View Auctions
+                </button>
+            </div>
+
+            <div class="product">
+                <h2>My Bids</h2>
+
+                <p>
+                    View the products you have bid on.
+                </p>
+
+               <button onclick="viewMyBids()">
+    View My Bids
+</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

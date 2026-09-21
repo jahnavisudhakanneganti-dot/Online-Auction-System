@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Online Auction System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("adminLoggedIn") !== "true") {
+            window.location.href = "admin-login.html";
+        }
+    </script>
+
+    <header>
+        <h1>Online Auction System</h1>
+        <p>Admin Panel</p>
+    </header>
+
+    <nav>
+        <a href="admin-dashboard.html">Admin Dashboard</a>
+        <a href="#" onclick="adminLogout()">Logout</a>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Admin Dashboard</h1>
+
+        <p>Add and manage auction products.</p>
+
+        <form id="auctionForm">
+
+            <h2>Add New Auction</h2>
+
+            <p>
+                <label>Product Name</label><br>
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Enter product name"
+                    required>
+            </p>
+
+            <p>
+                <label>Starting Bid</label><br>
+                <input
+                    type="number"
+                    id="startingBid"
+                    placeholder="Enter starting bid"
+                    min="1"
+                    required>
+            </p>
+
+            <p>
+                <label>Description</label><br>
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Enter product description"
+                    required>
+            </p>
+
+            <p>
+                <label>Product Image</label><br>
+                <input
+                    type="file"
+                    id="productImage"
+                    accept="image/*"
+                    required>
+            </p>
+
+            <button type="submit">
+                Add Auction
+            </button>
+
+        </form>
+
+        <br>
+
+        <h2>Manage Auctions</h2>
+
+        <div id="adminAuctionList"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
